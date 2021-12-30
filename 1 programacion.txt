@@ -1,0 +1,194 @@
+1) Objetos identidficados
+
+Paquete 
+Empresa
+Empleado
+Concesrioanri
+Nombre
+Dirrecion
+Destino
+Envio
+Forma
+Vehiculo
+
+Método Descripción 
++ Concatenación (unión de hilera).También permite 
+concatenar una hilera con un dato numérico o booleano. 
+EJEMPLO 
+1-) String cadena = “Universidad " + “ Técnica"; 
+Ahora cadena contendrá: " Universidad Técnica " 
+Cadena += “ Nacional”; 
+Ahora cadena contiene Universidad Técnica Nacional 
+2-) int i = 5; 
+String resultado = "El valor de i es " + i; 
+Ahora resultado contiene: “El valor de i es 5” 
+
+length( ) Retorna la cantidad de caracteres que tiene la String 
+EJEMPLO 
+1-) String cadena = “Universidad Técnica”; 
+int a = cadena.length(); 
+La variable “a” contendrá 19 
+
+
+int indexOf(String ó char) Retorna el índice o posición donde aparece por primera vez la String o char 
+que se recibe como parámetro, o un -1 si no la encuentra 
+EJEMPLO 
+1-) String cadena = "San Jose"; 
+int posicion = cadena.indexOf("Jose" ); 
+Ahora posición contiene un 4 
+int a = cadena.indexOf(‘o’); 
+Ahora la variable a contiene un 5 
+Recuerde que la primera posición es cero. 
+
+String replace (char viejoChar, char nuevoChar)Remplaza en la hilera que invoca el método, el viejoChar por el 
+nuevoChar. Se utiliza para reemplazar caracteres 
+EJEMPLO 
+1-) String hilera, cadena = “mamá"; 
+hilera = cadena.replace(‘m’,’p’ ); 
+Ahora hilera contiene “papá” y cadena continúa 
+teniendo “mamá”. 
+
+
+
+String replaceAll (String viejaString, String nuevaString)Remplaza en la hilera que invoca al método la vieja String 
+por la nueva String. Se utiliza para reemplazar subhileras 
+EJEMPLO 
+1-) String cadena = “José Soto"; 
+cadena = cadena.replaceAll(“Soto”,”Solís” ); 
+Ahora cadena contiene “José Solís” ya que se modificó 
+sobre ella misma 
+
+
+String toLowerCase() Convierte todos los caracteres de la hilera a minúscula. 
+Solo para hileras, no funciona para char. 
+EJEMPLO 
+1-) String cadena = "JAVA"; 
+cadena = cadena.toLowerCase(); 
+Ahora cadena contiene “java” 
+
+String toUpperCase() Convierte todos los caracteres de la hilera a mayúscula. Solo 
+para hileras, no funciona para char. 
+EJEMPLO 
+1-) String cadena = "java"; 
+cadena = cadena.toUpperCase(); 
+Ahora cadena contiene “JAVA” 
+
+
+boolean equals(String str): Compara la hilera que invoca al método con la del parámetro. Si 
+son iguales retorna true y si nó, retorna false. Es sensitivo a 
+mayúsculas y minúsculas. 
+EJEMPLO 
+1-) String cadena1 = “alajuela", cadena2 = “Alajuela”; 
+if (cadena1.equals(cadena2)){ 
+out.println(“Son iguales”); 
+else 
+out.println(“Son diferentes”); 
+La impresión será: Son diferentes 
+
+
+
+boolean equalsIgnoreCase (String str) Compara la hilera que invoca al método con la del parámetro. Si 
+son iguales retorna true y si nó, retorna false. No es sensitivo a 
+mayúsculas y minúsculas. 
+EJEMPLO 
+1-) String cadena1 = “alajuela"; 
+String cadena2 = “Alajuela”; 
+if (cadena1.equalsIgnoreCase(cadena2)){ 
+out.println(“Son iguales”); 
+else 
+out.println(“Son diferentes”); 
+La impresión será: Son iguales 
+
+int compareTo(String str1)Compara 2 cadenas y retorna un valor numérico.: 
+Cero (o): si ambas cadenas son iguales 
+Un número < 0 si la primera hilera es menor a la segunda. 
+Un número > 0 si la primera hilera es mayor a la segunda. 
+EJEMPLO 
+String cad1="1234"; 
+String cad2="1334"; 
+valor=cad1.compareTo(cad2); 
+if(valor==0) 
+out.println("Son iguales"; 
+else 
+if (valor<0) 
+out.println("cad1 menor cad2"; 
+else 
+out.println("cad1 mayor cad2"; 
+
+String trim(): 
+Elimina espacios en blanco al principio y al final de la cadena. No elimina los espacios situados entre las palabras. 
+EJEMPLO 
+1-) String cadena = " Programación 1 "; 
+cadena = cadena.trim(); 
+Ahora cadena contiene “Programación 1” 
+
+
+String substring(int indiceInicial, int indiceFinal) Retorna el segmento de la String entre la posición ‘indiceInicial’ inclusive hasta una posición anterior a ‘indiceFinal’. 
+EJEMPLO 
+1-) String cadena = "Desarrollo Orientado a Objetos"; 
+out.println(cadena.substring(11,20)); 
+Impresión: Orientado 
+
+
+char charAt (int indice)Devuelve el carácter que ocupa la posición indicada por el índice. 
+EJEMPLO 
+1-) String cadena = "Polimorfismo"; 
+out.println(cadena.charAt(4)); 
+Impresión : m 
+2-) char caracter = cadena.charAt(7); 
+Ahora carácter contiene ‘f’ 
+
+
+String.valueOfConvierte valores de una clase a otra. Permite convertir valores que no son de tipo String a valores de tipo String. 
+Este método pertenece a la clase String directamente, no hay que utilizar el nombre del objeto creado ( es un método estático). 
+EJEMPLO 
+String numero = String.valueOf(1234); 
+String fecha = String.valueOf(new Date()); 
+
+
+
+
+
+Métodos de la clase Character 
+
+bolean isLetter(char caracter)) 
+Retorna un verdadero si el carácter del parámetro es una letra 
+EJEMPLO 
+1-) char caracter; 
+if (Character.isLetter(caracter)) 
+out.println(caracter +" es una letra"; 
+
+
+bolean isDigit(char caracter)) 
+Retorna un verdadero si el carácter del parámetro es un dígito 
+EJEMPLO 
+1-) char caracter; 
+if (Character.isDigit(caracter)) 
+out.println(caracter +" es un dígito"; 
+
+bolean isUpperCase(char caracter) 
+Retorna un verdadero si el carácter del parámetro es una letra mayúscula 
+EJEMPLO 
+1-) char caracter; 
+if (Character.isUpperCase(caracter)) 
+out.println(caracter +" es una letra mayúscula"; 
+
+boolean isLowerCase(char caracter) 
+Retorna un verdadero si el carácter del parámetro es una letra minúscula 
+EJEMPLO 
+1-) char caracter; 
+if (Character.isLowerCase(caracter)) 
+out.println(caracter +" es una letra minúscula"; 
+
+
+
+
+
+Conversiones 
+int valor = Integer.parseInt(String)// Pasar de String a int 
+String resultado = Integer.toString(12345) // Pasar de int a String 
+String resultado = Double.toString(12345.25)// Pasar de double a String 
+String resultado = Float.toString(12345.70)// Pasar de float a String 
+String hilera = Character.toString(caracter)//Pasar de caracter a hilera 
+String numero = String.valueOf(1234); 
+String fecha = String.valueOf(new Date());
